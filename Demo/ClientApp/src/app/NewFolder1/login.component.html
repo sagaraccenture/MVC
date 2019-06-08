@@ -1,0 +1,32 @@
+<div class='login' *ngIf="doshows" id="Signin">
+  <h2>Sign in</h2>
+  <input name='username' [(ngModel)]="username" placeholder='Username' type='text' />
+  <input id='pw' name='password'[(ngModel)]="pass" placeholder='Password' type='password' />
+  <div class='remember'>
+    <input checked='' id='remember' name='remember' type='checkbox' />
+    <label for='remember'></label>Remember me
+  </div>
+  <button style="width:48%" class="btn btn-primary pull-left" (click)="dosign()">Sign in</button>
+  <button style="width:48%" class="btn btn-primary pull-right" (click)="SignUp()">Sign Up</button>
+  <br />
+  <a class='forgot' href='#'>Forgot your password?</a>
+</div>
+
+
+<div class='login' *ngIf="show" #signup style="top:35%">
+  <h2>Sign up</h2>
+  <input name='first' placeholder='First Name' type='text' class="pull-left" style="width:48%" />
+  <input name='last' placeholder='Last Name' type='text' class="pull-right" style="width:48%" />
+  <input name='username' placeholder='Username' type='text' />
+  <input name='email' placeholder='Email' type='text' />
+  <input id='pw' name='password' placeholder='Password' type='password' />
+  <input id='cmpw' name='compassword' placeholder='Comfirm Password' type='password' />
+  
+  <div class='remember'>
+    <input checked='' id='remember' name='remember' type='checkbox' />
+    <label for='remember'></label>I agree with the terms and condition
+  </div>
+  <button style="width:48%" class="btn btn-primary pull-right">Sign Up</button>
+  <br />
+  <a class='forgot'  [routerLink]='["/"]'  (click)="signin()">Already has account</a>
+</div>
